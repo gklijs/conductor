@@ -16,7 +16,6 @@ pub struct CorsPlugin(CorsPluginConfig);
 static WILDCARD: &str = "*";
 static ACCESS_CONTROL_ALLOW_PRIVATE_NETWORK: &str = "Access-Control-Allow-Private-Network";
 
-#[async_trait::async_trait(?Send)]
 impl CreatablePlugin for CorsPlugin {
   type Config = CorsPluginConfig;
 
@@ -122,7 +121,6 @@ impl CorsPlugin {
   }
 }
 
-#[async_trait::async_trait(?Send)]
 impl Plugin for CorsPlugin {
   async fn on_downstream_http_request(&self, ctx: &mut RequestExecutionContext) {
     if ctx.downstream_http_request.method == Method::OPTIONS {

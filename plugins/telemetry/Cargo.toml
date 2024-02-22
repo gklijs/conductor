@@ -14,7 +14,6 @@ reqwest = { workspace = true }
 tracing = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
-async-trait = { workspace = true }
 conductor_common = { path = "../../libs/common" }
 conductor_tracing = { path = "../../libs/tracing" }
 schemars = { workspace = true }

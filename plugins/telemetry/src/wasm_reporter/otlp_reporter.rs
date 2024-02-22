@@ -20,7 +20,6 @@ use web_time::{Duration, UNIX_EPOCH};
 #[derive(Debug)]
 pub struct WasmTracingHttpClient;
 
-#[async_trait::async_trait]
 impl HttpClient for WasmTracingHttpClient {
   async fn send(&self, request: Request<Vec<u8>>) -> Result<Response<Bytes>, HttpError> {
     wasm_polyfills::call_async(async move {
@@ -130,7 +129,6 @@ impl WasmOtlpReporter {
   }
 }
 
-#[async_trait::async_trait(?Send)]
 impl AsyncReporter for WasmOtlpReporter {
   async fn flush(&mut self, spans: &[SpanRecord]) {
     if spans.is_empty() {

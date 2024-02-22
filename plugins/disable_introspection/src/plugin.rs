@@ -15,7 +15,6 @@ pub struct DisableIntrospectionPlugin {
   condition: Option<VrlProgramProxy>,
 }
 
-#[async_trait::async_trait(?Send)]
 impl CreatablePlugin for DisableIntrospectionPlugin {
   type Config = DisableIntrospectionPluginConfig;
 
@@ -36,7 +35,6 @@ impl CreatablePlugin for DisableIntrospectionPlugin {
   }
 }
 
-#[async_trait::async_trait(?Send)]
 impl Plugin for DisableIntrospectionPlugin {
   async fn on_downstream_graphql_request(&self, ctx: &mut RequestExecutionContext) {
     if let Some(op) = &ctx.downstream_graphql_request {

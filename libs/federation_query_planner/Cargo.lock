@@ -76,7 +76,6 @@ dependencies = [
  "async-graphql-parser",
  "async-graphql-value",
  "async-stream",
- "async-trait",
  "base64 0.13.1",
  "bytes",
  "fast_chemail",
@@ -156,17 +155,6 @@ name = "async-stream-impl"
 version = "0.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "16e62a023e7c117e27523144c5d2459f4397fcc3cab0085af8e2224f643a0193"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
-name = "async-trait"
-version = "0.1.71"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a564d521dd56509c4c47480d00b80ee55f7e385ae48db5744c67ad50c92d2ebf"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1310,7 +1298,6 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "async-graphql",
- "async-trait",
  "criterion",
  "futures",
  "graphql-parser",

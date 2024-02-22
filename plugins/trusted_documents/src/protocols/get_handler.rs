@@ -96,7 +96,6 @@ impl TrustedDocumentsGetHandler {
   }
 }
 
-#[async_trait::async_trait(?Send)]
 impl TrustedDocumentsProtocol for TrustedDocumentsGetHandler {
   async fn try_extraction(
     &self,

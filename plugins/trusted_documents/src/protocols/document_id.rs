@@ -10,7 +10,6 @@ pub struct DocumentIdTrustedDocumentsProtocol {
   pub field_name: String,
 }
 
-#[async_trait::async_trait(?Send)]
 impl TrustedDocumentsProtocol for DocumentIdTrustedDocumentsProtocol {
   async fn try_extraction(
     &self,

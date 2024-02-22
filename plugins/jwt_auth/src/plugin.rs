@@ -95,7 +95,6 @@ impl From<JwtError> for StatusCode {
   }
 }
 
-#[async_trait::async_trait(?Send)]
 impl CreatablePlugin for JwtAuthPlugin {
   type Config = JwtAuthPluginConfig;
 
@@ -329,7 +328,6 @@ impl JwtAuthPlugin {
   }
 }
 
-#[async_trait::async_trait(?Send)]
 impl Plugin for JwtAuthPlugin {
   async fn on_downstream_http_request(&self, ctx: &mut RequestExecutionContext) {
     let jwks = join_all(

@@ -1,6 +1,5 @@
 use minitrace::collector::{Reporter as MinitraceSyncReporter, SpanRecord};
 
-#[async_trait::async_trait(?Send)]
 pub trait AsyncReporter: Send + 'static {
   async fn flush(&mut self, spans: &[SpanRecord]);
 }

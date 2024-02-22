@@ -17,7 +17,6 @@ pub struct ExtractedTrustedDocument {
   pub extensions: Option<Map<String, Value>>,
 }
 
-#[async_trait::async_trait(?Send)]
 pub trait TrustedDocumentsProtocol: Sync + Send + Debug {
   async fn try_extraction(
     &self,

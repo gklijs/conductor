@@ -31,7 +31,6 @@ pub enum TrustedDocumentsPluginError {
   StoreCreationError(String),
 }
 
-#[async_trait::async_trait(?Send)]
 impl CreatablePlugin for TrustedDocumentsPlugin {
   type Config = TrustedDocumentsPluginConfig;
 
@@ -95,7 +94,6 @@ impl CreatablePlugin for TrustedDocumentsPlugin {
   }
 }
 
-#[async_trait::async_trait(?Send)]
 impl Plugin for TrustedDocumentsPlugin {
   async fn on_downstream_http_request(&self, ctx: &mut RequestExecutionContext) {
     if ctx.downstream_graphql_request.is_some() {

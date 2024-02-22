@@ -11,7 +11,6 @@ pub struct TrustedDocumentsFilesystemStore {
   known_documents: HashMap<String, String>,
 }
 
-#[async_trait::async_trait(?Send)]
 impl TrustedDocumentsStore for TrustedDocumentsFilesystemStore {
   async fn has_document(&self, hash: &str) -> bool {
     self.known_documents.contains_key(hash)

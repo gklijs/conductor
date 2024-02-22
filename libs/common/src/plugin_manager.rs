@@ -5,7 +5,7 @@ use crate::{
 };
 use reqwest::Response;
 
-#[async_trait::async_trait(?Send)]
+
 pub trait PluginManager: std::fmt::Debug + Send + Sync {
   async fn on_downstream_http_request(&self, context: &mut RequestExecutionContext);
   fn on_downstream_http_response(

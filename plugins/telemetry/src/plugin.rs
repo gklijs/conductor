@@ -15,7 +15,6 @@ pub struct TelemetryPlugin {
   config: TelemetryPluginConfig,
 }
 
-#[async_trait::async_trait(?Send)]
 impl CreatablePlugin for TelemetryPlugin {
   type Config = TelemetryPluginConfig;
 
@@ -223,5 +222,4 @@ impl TelemetryPlugin {
   }
 }
 
-#[async_trait::async_trait(?Send)]
 impl Plugin for TelemetryPlugin {}

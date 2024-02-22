@@ -1257,7 +1257,6 @@ name = "conductor_common"
 version = "0.0.0"
 dependencies = [
  "anyhow",
- "async-trait",
  "bytes",
  "futures",
  "graphql-parser",
@@ -1307,7 +1306,6 @@ name = "conductor_engine"
 version = "0.0.0"
 dependencies = [
  "anyhow",
- "async-trait",
  "base64 0.21.7",
  "conductor_common",
  "conductor_config",
@@ -1355,7 +1353,6 @@ dependencies = [
 name = "conductor_tracing"
 version = "0.0.0"
 dependencies = [
- "async-trait",
  "conductor_common",
  "minitrace",
  "opentelemetry",
@@ -1451,7 +1448,6 @@ checksum = "06ea2b9bc92be3c2baa9334a323ebca2d6f074ff852cd1d7b11064035cd3868f"
 name = "cors_plugin"
 version = "0.0.0"
 dependencies = [
- "async-trait",
  "conductor_common",
  "schemars",
  "serde",
@@ -1747,7 +1743,6 @@ name = "disable_introspection_plugin"
 version = "0.0.0"
 dependencies = [
  "anyhow",
- "async-trait",
  "conductor_common",
  "schemars",
  "serde",
@@ -1914,7 +1909,6 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "async-graphql",
- "async-trait",
  "conductor_common",
  "conductor_tracing",
  "criterion",
@@ -2154,7 +2148,6 @@ dependencies = [
 name = "graphiql_plugin"
 version = "0.0.0"
 dependencies = [
- "async-trait",
  "conductor_common",
  "schemars",
  "serde",
@@ -2334,7 +2327,6 @@ dependencies = [
 name = "http_get_plugin"
 version = "0.0.0"
 dependencies = [
- "async-trait",
  "conductor_common",
  "schemars",
  "serde",
@@ -2636,7 +2628,6 @@ dependencies = [
 name = "jwt_auth_plugin"
 version = "0.0.0"
 dependencies = [
- "async-trait",
  "conductor_common",
  "cookie 0.18.0",
  "futures",
@@ -2812,7 +2803,6 @@ checksum = "ffbee8634e0d45d258acb448e7eaab3fce7a0a467395d4d9f228e3c1f01fb2e4"
 name = "match_content_type_plugin"
 version = "0.0.0"
 dependencies = [
- "async-trait",
  "conductor_common",
  "schemars",
  "serde",
@@ -2947,7 +2937,6 @@ dependencies = [
 name = "minitrace_reqwest"
 version = "0.0.0"
 dependencies = [
- "async-trait",
  "conductor_tracing",
  "minitrace",
  "reqwest",
@@ -4781,7 +4770,6 @@ dependencies = [
 name = "telemetry_plugin"
 version = "0.0.0"
 dependencies = [
- "async-trait",
  "conductor_common",
  "conductor_tracing",
  "http 0.2.11",
@@ -5219,7 +5207,6 @@ dependencies = [
 name = "trusted_documents_plugin"
 version = "0.0.0"
 dependencies = [
- "async-trait",
  "conductor_common",
  "schemars",
  "serde",
@@ -5525,7 +5512,6 @@ name = "vrl_plugin"
 version = "0.0.0"
 dependencies = [
  "anyhow",
- "async-trait",
  "conductor_common",
  "schemars",
  "serde",

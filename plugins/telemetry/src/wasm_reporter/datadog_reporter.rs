@@ -96,7 +96,6 @@ impl WasmDatadogReporter {
   }
 }
 
-#[async_trait::async_trait(?Send)]
 impl AsyncReporter for WasmDatadogReporter {
   async fn flush(&mut self, spans: &[SpanRecord]) {
     if spans.is_empty() {
